@@ -21,28 +21,35 @@
       justify-content: center;
       align-items: center;
       padding: 2rem;
+      position: relative;
     }
 
     .challenge-message {
       font-size: 1.2rem;
       line-height: 1.6;
       margin-bottom: 2rem;
-      text-align: center;
+      text-align: gescheiden;
       max-width: 560px;
       color: #e5e5e5;
     }
 
     .captcha-box {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
-    .footer-info {
+    .footer {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
       font-size: 0.85rem;
       color: #9ca3af;
       text-align: center;
+      width: 100%;
+      max-width: 560px;
     }
 
-    .footer-info p {
+    .footer p {
       margin-top: 0.25rem;
     }
 
@@ -52,6 +59,10 @@
       }
       .challenge-message {
         font-size: 1.05rem;
+      }
+      .footer {
+        bottom: 0.5rem;
+        font-size: 0.8rem;
       }
     }
   </style>
@@ -65,9 +76,10 @@
     ::CAPTCHA_BOX::
   </div>
 
-  <div class="footer-info">
+  <div class="footer">
     <p>Ray ID: ::RAY_ID::</p>
     <p>Client IP: ::CLIENT_IP::</p>
   </div>
 </body>
-</html
+</html>
+

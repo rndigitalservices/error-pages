@@ -1,76 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verifying connection - RN Digital Services</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verifying connection - RN Digital Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #000000;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #000000;
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
 
-        .challenge-message {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            margin-bottom: 3rem;
-            max-width: 500px;
-            text-align: center;
-            opacity: 0.9;
-        }
+    .challenge-message {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 560px;
+      color: #e5e5e5;
+    }
 
-        .token-display {
-            background: rgba(0, 212, 255, 0.1);
-            border: 2px dashed #00d4ff;
-            border-radius: 12px;
-            padding: 2rem;
-            font-family: 'Courier New', monospace;
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #00d4ff;
-            letter-spacing: 3px;
-            word-break: break-all;
-            animation: pulse 2s infinite;
-            max-width: 500px;
-            width: 100%;
-        }
+    .captcha-box {
+      margin-bottom: 2.5rem;
+    }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.02); }
-        }
+    .footer-info {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      text-align: center;
+    }
 
-        @media (max-width: 768px) {
-            body {
-                padding: 1rem;
-            }
-            .challenge-message {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    .footer-info p {
+      margin-top: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1.5rem;
+      }
+      .challenge-message {
+        font-size: 1.05rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <p class="challenge-message">
-        We must verify your connection. We are performing additional security checks to verify you are not a bot.
-        This protects our servers from attacks.
-    </p>
-    
-    <div class="token-display">
-        ::CAPTCHA_BOX::
-    </div>
+  <p class="challenge-message">
+    We must verify your connection. We are performing additional security checks to confirm you are not a bot, in order to protect our services from malicious traffic.
+  </p>
+
+  <div class="captcha-box">
+    ::CAPTCHA_BOX::
+  </div>
+
+  <div class="footer-info">
+    <p>Ray ID: ::RAY_ID::</p>
+    <p>Client IP: ::CLIENT_IP::</p>
+  </div>
 </body>
-</html>
+</html
